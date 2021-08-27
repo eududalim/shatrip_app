@@ -42,15 +42,15 @@ class LoginPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      '\n\nA expressão Lorem ipsum em design gráfico e' + 'editoração é um texto padrão em' + 'latim utilizado na produção gráfica ' + 'para preencher os espaços de',
+                      '\n\nA expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de',
                       style: LoginTheme.loginTextBody1,
                     ),
                     Text(
-                      '\n\nA expressão Lorem ipsum em design gráfico e' + 'editoração é um texto padrão em' + 'latim utilizado na produção gráfica ' + 'para preencher os espaços de',
+                      '\n\nA expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de',
                       style: LoginTheme.loginTextBody1,
                     ),
                     Text(
-                      '\n\nA expressão Lorem ipsum em design gráfico e' + 'editoração é um texto padrão em' + 'latim utilizado na produção gráfica' + 'para preencher os espaços de',
+                      '\n\nA expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de',
                       style: LoginTheme.loginTextBody1,
                     ),
                   ],
