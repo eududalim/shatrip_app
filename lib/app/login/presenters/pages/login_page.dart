@@ -27,17 +27,21 @@ class LoginPage extends StatelessWidget {
           ),
           Column(
             children: [
-              Container(
-                padding: EdgeInsets.only(top: 70),
-                alignment: Alignment.topCenter,
-                child: Text(
-                  'SHATRiP',
-                  textAlign: TextAlign.center,
-                  style: LoginTheme.loginTitle1,
-                  textScaleFactor: 1,
+              Expanded(
+                flex: 20,
+                child: Container(
+                  padding: EdgeInsets.only(top: 70),
+                  alignment: Alignment.topCenter,
+                  child: Text(
+                    'SHATRiP',
+                    textAlign: TextAlign.center,
+                    style: LoginTheme.loginTitle1,
+                    textScaleFactor: 1,
+                  ),
                 ),
               ),
               Container(
+                alignment: Alignment.center,
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   children: [
