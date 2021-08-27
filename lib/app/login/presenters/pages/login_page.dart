@@ -71,7 +71,9 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Expanded(
                         child: ElevatedButton(
-                          backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                          ),
                           child: Text('Criar conta'),
                         ),
                       ),
