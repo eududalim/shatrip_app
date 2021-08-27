@@ -67,9 +67,16 @@ class LoginPage extends StatelessWidget {
                 flex: 20,
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(children: [
-                    Expanded(child: ElevatedButton(child: Text('')))
-                  ]),
+                  child: Column(
+                    children: [
+                      Expanded(
+                        child: ElevatedButton(
+                          backgroundColor: Colors.red,
+                          child: Text('Criar conta'),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
