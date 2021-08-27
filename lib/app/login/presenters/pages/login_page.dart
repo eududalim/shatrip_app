@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
                 flex: 20,
                 child: Container(
                   // padding: EdgeInsets.only(top: 70),
-                  alignment: Alignment.topCenter,
+                  alignment: Alignment.center,
                   child: Text(
                     'SHATRiP',
                     textAlign: TextAlign.center,
