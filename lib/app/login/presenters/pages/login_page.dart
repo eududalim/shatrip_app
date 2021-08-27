@@ -40,24 +40,27 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                alignment: Alignment.center,
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Column(
-                  children: [
-                    Text(
-                      '\n\nA expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de',
-                      style: LoginTheme.loginTextBody1,
-                    ),
-                    Text(
-                      '\n\nA expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de',
-                      style: LoginTheme.loginTextBody1,
-                    ),
-                    Text(
-                      '\n\nA expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de',
-                      style: LoginTheme.loginTextBody1,
-                    ),
-                  ],
+              Expanded(
+                flex: 80,
+                child: Container(
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    children: [
+                      Text(
+                        '\n\nA expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de',
+                        style: LoginTheme.loginTextBody1,
+                      ),
+                      Text(
+                        '\n\nA expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de',
+                        style: LoginTheme.loginTextBody1,
+                      ),
+                      Text(
+                        '\n\nA expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de',
+                        style: LoginTheme.loginTextBody1,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
