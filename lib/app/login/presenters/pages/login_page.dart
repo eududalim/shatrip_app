@@ -63,10 +63,10 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Expanded(
-                flex: 20,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Expanded(
+                  flex: 20,
                   child: Column(
                     children: [
                       Expanded(
