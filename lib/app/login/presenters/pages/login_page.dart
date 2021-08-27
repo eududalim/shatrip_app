@@ -41,7 +41,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               Expanded(
-                flex: 80,
+                flex: 60,
                 child: Container(
                   alignment: Alignment.center,
                   padding: EdgeInsets.symmetric(horizontal: 20),
@@ -61,6 +61,15 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+              ),
+              Expanded(
+                flex: 20,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(children: [
+                    Expanded(child: ElevatedButton(child: Text('')))
+                  ]),
                 ),
               ),
             ],

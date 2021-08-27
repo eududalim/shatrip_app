@@ -9,8 +9,8 @@ class LoginTheme {
       );
 
   static TextStyle get loginTextBody1 => TextStyle(
-        fontSize: 14,
-        fontWeight: FontWeight.w100,
+        fontSize: 13,
+        // fontWeight: FontWeight.w100,
         color: Colors.white,
         shadows: [
           Shadow(blurRadius: 0.5)
