@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/login_theme.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -24,15 +25,37 @@ class LoginPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          Container(
-            padding: EdgeInsets.only(top: 70),
-            alignment: Alignment.topCenter,
-            child: Text(
-              'SHATRiP',
-              textAlign: TextAlign.center,
-              style: LoginTheme.loginTitle1,
-              textScaleFactor: 1,
-            ),
+          Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 70),
+                alignment: Alignment.topCenter,
+                child: Text(
+                  'SHATRiP',
+                  textAlign: TextAlign.center,
+                  style: LoginTheme.loginTitle1,
+                  textScaleFactor: 1,
+                ),
+              ),
+              Container(
+                child: Column(
+                  children: [
+                    Text(
+                      '\n\nA expressão Lorem ipsum em design gráfico e' + 'editoração é um texto padrão em' + 'latim utilizado na produção gráfica ' + 'para preencher os espaços de',
+                      style: LoginTheme.loginTextBody1,
+                    ),
+                    Text(
+                      '\n\nA expressão Lorem ipsum em design gráfico e' + 'editoração é um texto padrão em' + 'latim utilizado na produção gráfica ' + 'para preencher os espaços de',
+                      style: LoginTheme.loginTextBody1,
+                    ),
+                    Text(
+                      '\n\nA expressão Lorem ipsum em design gráfico e' + 'editoração é um texto padrão em' + 'latim utilizado na produção gráfica' + 'para preencher os espaços de',
+                      style: LoginTheme.loginTextBody1,
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ]),
       ),
