@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import '../login/presenters/pages/login_page.dart';
+import 'package:get/get.dart';
+import '../login/ui/pages/first_page.dart';
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
         title: 'Shatrip',
         theme: ThemeData(
           fontFamily: "Poppins",
@@ -21,6 +22,6 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        home: LoginPage());
+        home: FirstPage());
   }
 }
