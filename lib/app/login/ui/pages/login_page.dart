@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shatrip/app/login/ui/elements/buttons_alternatives_login.dart';
+import 'package:shatrip/app/login/ui/elements/custom_form_field.dart';
+import 'package:shatrip/app/login/ui/theme/login_theme.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key key}) : super(key: key);
@@ -17,6 +21,86 @@ class LoginPage extends StatelessWidget {
                   Theme.of(context).primaryColor,
                   Theme.of(context).accentColor
                 ])),
+          ),
+          Container(
+            padding: EdgeInsets.all(20),
+            child: Column(
+              children: [
+                Expanded(
+                    flex: 1,
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Bem vindo de volta!',
+                        style: Theme.of(context).textTheme.headline2,
+                        overflow: TextOverflow.fade,
+                      ),
+                    )),
+                Expanded(
+                  flex: 2,
+                  child: Card(
+                    shape: ContinuousRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width - (20 / 100),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          CustomFormField(
+                            labelText: 'Email',
+                            hintText: 'email@exemplo.com',
+                            onTap: () {},
+                            icon: Icon(Icons.alternate_email_outlined),
+                          ),
+                          CustomFormField(
+                              labelText: 'Senha',
+                              hintText: '******',
+                              icon: Icon(Icons.lock_outline_rounded),
+                              obscureText: true,
+                              onTap: () {}),
+                          Container(
+                            width: double.maxFinite,
+                            height: 55,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              child: Text('Entrar'),
+                              style: LoginTheme.buttonStyle2(context),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                    flex: 1,
+                    child: Container(
+                      child: Column(
+                        children: [
+                          ButtonsAlternativesLogin(),
+                          Row(
+                            children: [
+                              TextButton.icon(
+                                onPressed: Get.back,
+                                icon: Icon(
+                                  Icons.arrow_back,
+                                  color: Colors.white,
+                                  size: 18,
+                                ),
+                                label: Text(
+                                  'Voltar',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    )),
+              ],
+            ),
           )
         ],
       ),

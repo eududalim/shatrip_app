@@ -4,11 +4,7 @@ import 'package:shatrip/app/login/ui/pages/login_page.dart';
 import 'package:shatrip/app/login/ui/pages/sign_up_page.dart';
 
 class FirstController extends GetxController {
+  goToLoginPage() => Get.to(() => LoginPage());
 
- get goToLoginPage => Get.to(() => LoginPage());
-
- get goToSignUpPage => Get.to(() => SignUpPage());
-
-
-
+  goToSignUpPage() => Get.to(() => SignUpPage());
 }
