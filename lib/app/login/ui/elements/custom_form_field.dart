@@ -38,7 +38,7 @@ class CustomFormField extends StatelessWidget {
             labelStyle: TextStyle(letterSpacing: 0),
             prefixIcon: icon,
             enabled: enable,
-            contentPadding: EdgeInsets.all(20.0),
+            contentPadding: EdgeInsets.all(10.0),
             hintText: hintText,
             hintStyle: obscureText
                 ? TextStyle(
@@ -47,7 +47,7 @@ class CustomFormField extends StatelessWidget {
                   )
                 : null,
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30.0),
+              borderRadius: BorderRadius.circular(12.0),
             ),
           ),
         ),

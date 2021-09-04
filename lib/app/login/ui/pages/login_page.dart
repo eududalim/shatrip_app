@@ -62,7 +62,7 @@ class LoginPage extends StatelessWidget {
                               onTap: () {}),
                           Container(
                             width: double.maxFinite,
-                            height: 55,
+                            // height: 55,
                             child: ElevatedButton(
                               onPressed: () {},
                               child: Text('Entrar'),
