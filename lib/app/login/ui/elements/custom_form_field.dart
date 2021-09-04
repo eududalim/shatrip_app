@@ -22,37 +22,34 @@ class CustomFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        TextFormField(
-          obscureText: obscureText,
-          style: obscureText
-              ? TextStyle(
-                  letterSpacing: 3,
-                )
-              : null,
-          keyboardType: keyboardType,
-          onTap: onTap,
-          decoration: InputDecoration(
-            labelText: labelText,
-            labelStyle: TextStyle(letterSpacing: 0),
-            prefixIcon: icon,
-            enabled: enable,
-            contentPadding: EdgeInsets.all(10.0),
-            hintText: hintText,
-            hintStyle: obscureText
-                ? TextStyle(
-                    letterSpacing: 3,
-                    fontWeight: FontWeight.w600,
-                  )
-                : null,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12.0),
-            ),
-          ),
-        ),
-        SizedBox(height: 20),
-      ],
+    return TextField(
+      obscureText: obscureText,
+      style: obscureText
+          ? TextStyle(
+              letterSpacing: 3,
+            )
+          : null,
+      keyboardType: keyboardType,
+      onTap: onTap,
+      decoration: InputDecoration(
+        fillColor: Colors.white,
+        focusColor: Colors.white,
+        labelText: labelText,
+        labelStyle: TextStyle(letterSpacing: 0),
+        prefixIcon: CircleAvatar(backgroundColor: Colors.white, child: icon),
+        enabled: enable,
+        contentPadding: EdgeInsets.all(10.0),
+        hintText: hintText,
+        hintStyle: obscureText
+            ? TextStyle(
+                letterSpacing: 3,
+                fontWeight: FontWeight.w600,
+              )
+            : null,
+        border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(30),
+            borderSide: BorderSide(color: Colors.white)),
+      ),
     );
   }
 }

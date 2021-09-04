@@ -38,40 +38,31 @@ class LoginPage extends StatelessWidget {
                     )),
                 Expanded(
                   flex: 2,
-                  child: Card(
-                    shape: ContinuousRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Container(
-                      width: MediaQuery.of(context).size.width - (20 / 100),
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          CustomFormField(
-                            labelText: 'Email',
-                            hintText: 'email@exemplo.com',
-                            onTap: () {},
-                            icon: Icon(Icons.alternate_email_outlined),
-                          ),
-                          CustomFormField(
-                              labelText: 'Senha',
-                              hintText: '******',
-                              icon: Icon(Icons.lock_outline_rounded),
-                              obscureText: true,
-                              onTap: () {}),
-                          Container(
-                            width: double.maxFinite,
-                            // height: 55,
-                            child: ElevatedButton(
-                              onPressed: () {},
-                              child: Text('Entrar'),
-                              style: LoginTheme.buttonStyle2(context),
-                            ),
-                          )
-                        ],
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CustomFormField(
+                        labelText: 'Email',
+                        hintText: 'email@exemplo.com',
+                        onTap: () {},
+                        icon: Icon(Icons.alternate_email_outlined),
                       ),
-                    ),
+                      CustomFormField(
+                          labelText: 'Senha',
+                          hintText: '******',
+                          icon: Icon(Icons.lock_outline_rounded),
+                          obscureText: true,
+                          onTap: () {}),
+                      Container(
+                        width: double.maxFinite,
+                        // height: 55,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: Text('Entrar'),
+                          style: LoginTheme.buttonStyle2(context),
+                        ),
+                      )
+                    ],
                   ),
                 ),
                 Expanded(
