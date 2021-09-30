@@ -36,7 +36,7 @@ class CustomFormField extends StatelessWidget {
         focusColor: Colors.white,
         labelText: labelText,
         labelStyle: TextStyle(letterSpacing: 0),
-        prefixIcon: CircleAvatar(backgroundColor: Colors.white, child: icon),
+        prefixIcon: icon,
         enabled: enable,
         contentPadding: EdgeInsets.all(10.0),
         hintText: hintText,

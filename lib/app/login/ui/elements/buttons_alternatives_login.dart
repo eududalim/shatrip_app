@@ -6,22 +6,13 @@ class ButtonsAlternativesLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-        onPressed: () {},
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Image.asset('assets/images/google.png'),
-            SizedBox(width: 16),
-            Text('Entrar usando o Google')
-          ],
-        ),
-        style: LoginTheme.buttonStyle1(context).copyWith(
-          side: MaterialStateProperty.all<BorderSide>(
-            BorderSide(
-              color: Theme.of(context).primaryColor,
-            ),
-          ),
-        ));
+    return TextButton.icon(
+      onPressed: () {},
+      icon: Image.asset('assets/images/google.png'),
+      label: Text(
+        'Entrar usando o Google',
+        style: LoginTheme.loginTextBody1,
+      ),
+    );
   }
 }
