@@ -12,6 +12,12 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Shatrip',
       theme: ThemeData(
+        inputDecorationTheme: InputDecorationTheme(
+          border: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.white),
+          ),
+          
+        ),
         fontFamily: "Poppins",
         primarySwatch: Colors.blue,
         primaryColor: Color(0xFF1F72EF),

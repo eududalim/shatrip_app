@@ -7,10 +7,11 @@ class HomeTheme {
         color: Colors.white,
       );
 
-  static InputDecoration inputDecoration1({String hintText, Icon icon, String labelText}) =>
+  static InputDecoration inputDecoration1(
+          {String hintText, Icon icon, String labelText}) =>
       InputDecoration(
         labelText: labelText,
-        prefixIcon: icon?? null,
+        prefixIcon: icon ?? null,
         hintText: hintText,
         hintStyle: TextStyle(
           color: Colors.white60,
@@ -26,5 +27,15 @@ class HomeTheme {
             color: Colors.white70,
           ),
         ),
+      );
+
+  static InputDecoration inputDecoration2({Icon icon}) => InputDecoration(
+        prefixIcon: icon ?? null,
+        enabledBorder:
+            OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+        disabledBorder:
+            OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+        focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.white, width: 2)),
       );
 }

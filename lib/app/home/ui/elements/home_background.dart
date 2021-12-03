@@ -12,7 +12,9 @@ class HomeBackground extends StatelessWidget {
         gradient: LinearGradient(colors: [
           Theme.of(context).primaryColor,
           Theme.of(context).accentColor,
-          Colors.blue[200]
+          Colors.blue[200],
+          Colors.white,
+          Colors.white
         ], begin: Alignment.topCenter, end: Alignment.bottomRight),
       ),
     );

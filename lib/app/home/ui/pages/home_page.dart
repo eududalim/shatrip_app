@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shatrip/app/home/ui/elements/home_header.dart';
 import 'package:shatrip/app/home/ui/themes/home_theme.dart';
 import '../elements/home_background.dart';
 
@@ -12,97 +13,110 @@ class HomePage extends StatelessWidget {
         children: [
           HomeBackground(),
           SafeArea(
-            child: Column(
+              child: CustomScrollView(
+            slivers: [
+              SliverAppBar(
+                backgroundColor: Colors.transparent,
+                expandedHeight: 230,
+                flexibleSpace: FlexibleSpaceBar(background: HomeHeaderWidget()),
+              ),
+              SliverGrid(
+                  delegate: SliverChildListDelegate([
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Container(
+                        color: Colors.white70,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        color: Colors.green,
+                      ),
+                    ),
+                  ]),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 1,
+                  ))
+            ],
+          )
+
+              /* ListView(
               children: [
                 Container(
-                  //   color: Colors.indigo.withAlpha(255),
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
-                  child: Column(
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.grey[300],
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 35, vertical: 15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.grey[300],
-                        ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'De:',
+                            style: HomeTheme.homeTextSearch1,
+                          ),
+                          SizedBox(height: 28),
+                          Text(
+                            'Para:',
+                            style: HomeTheme.homeTextSearch1,
+                          )
+                        ],
                       ),
                       SizedBox(
-                          height: MediaQuery.of(context).size.height > 640
-                              ? 30
-                              : 8),
-                      Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        width: 35,
+                      ),
+                      Expanded(
+                        child: Column(
                           children: [
-                            Flexible(
-                              flex: 1,
-                              child: Container(
-                                child: Text(
-                                  'De:',
+                            Container(
+                              margin: EdgeInsets.symmetric(vertical: 8),
+                              height: 33,
+                              child: TextField(
                                   style: HomeTheme.homeTextSearch1,
-                                ),
-                              ),
+                                  cursorColor: Colors.white,
+                                  decoration: HomeTheme.inputDecoration2),
                             ),
-                            Flexible(
-                              flex: 2,
-                              child: Container(
-                                padding: EdgeInsets.all(4),
-                                decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.white)),
-                                child: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.location_pin,
-                                      color: Colors.white,
-                                      size: 16,
-                                    ),
-                                    Text(
-                                      'Carinhanha',
-                                      style: HomeTheme.homeTextSearch1,
-                                    )
-                                  ],
-                                ),
-                              ),
-                            )
+                            Container(
+                              margin: EdgeInsets.symmetric(vertical: 8),
+                              height: 33,
+                              child: TextField(
+                                  style: HomeTheme.homeTextSearch1,
+                                  cursorColor: Colors.white,
+                                  decoration: HomeTheme.inputDecoration2),
+                            ),
                           ],
                         ),
-                      ),
-                      SizedBox(
-                        height:
-                            MediaQuery.of(context).size.height > 640 ? 24 : 8,
-                      ),
-                      Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Flexible(
-                              flex: 1,
-                              child: Container(
-                                child: Text(
-                                  'Para:',
-                                  style: HomeTheme.homeTextSearch1,
-                                ),
-                              ),
-                            ),
-                            Flexible(
-                                flex: 2,
-                                child: Container(
-                                  height: 31,
-                                  child: TextField(
-                                    style: HomeTheme.homeTextSearch1,
-                                    decoration: HomeTheme.inputDecoration1(hintText: 'Para onde deseja ir?')
-                                  ),
-                                ))
-                          ],
-                        ),
-                      )
+                      ),                      
                     ],
                   ),
                 ),
+                Container(width: MediaQuery.of(context).size.width * 0.8,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(25))
+                  ),
+                  child: Column(
+                    children: [
+                      
+                    ],
+                  ),
+                )
               ],
-            ),
-          )
+            ), */
+              )
         ],
       ),
     );
   }
 }
+
+/// MediaQuery.of(context).size.height > 640 ? 24 : 8,

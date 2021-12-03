@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shatrip/app/core/routes/app_routes.dart';
@@ -29,15 +30,16 @@ class LoginPage extends StatelessWidget {
             child: Column(
               children: [
                 Expanded(
-                    flex: 1,
-                    child: Container(
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Bem vindo de volta!',
-                        style: Theme.of(context).textTheme.headline2,
-                        overflow: TextOverflow.fade,
-                      ),
-                    )),
+                  flex: 1,
+                  child: Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Bem vindo de volta!',
+                      style: Theme.of(context).textTheme.headline2,
+                      overflow: TextOverflow.fade,
+                    ),
+                  ),
+                ),
                 Expanded(
                   flex: 2,
                   child: Container(
@@ -74,7 +76,7 @@ class LoginPage extends StatelessWidget {
                           // height: 55,
                           child: ElevatedButton(
                             onPressed: () {
-                              Get.toNamed(Routes.HOME);
+                              Get.offAllNamed(Routes.HOME);
                             },
                             child: Text('Entrar'),
                             style: LoginTheme.buttonStyle2(context),
@@ -91,12 +93,13 @@ class LoginPage extends StatelessWidget {
                         children: [
                           SizedBox(height: 10),
                           ButtonsAlternativesLogin(),
-                          Row(
-                            children: [
-                              TextButton.icon(
+                          Expanded(
+                            child: Container(
+                              alignment: Alignment.bottomLeft,
+                              child: TextButton.icon(
                                 onPressed: Get.back,
                                 icon: Icon(
-                                  Icons.arrow_back,
+                                  Icons.arrow_back_ios_new,
                                   color: Colors.white,
                                   size: 18,
                                 ),
@@ -104,8 +107,8 @@ class LoginPage extends StatelessWidget {
                                   'Voltar',
                                   style: TextStyle(color: Colors.white),
                                 ),
-                              )
-                            ],
+                              ),
+                            ),
                           )
                         ],
                       ),
