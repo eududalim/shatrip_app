@@ -22,18 +22,11 @@ class HomePage extends StatelessWidget {
               ),
               SliverGrid(
                   delegate: SliverChildListDelegate([
-                    Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Container(
-                        color: Colors.white70,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        color: Colors.green,
-                      ),
-                    ),
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                      ],
+                    )
                   ]),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 1,
